@@ -1,0 +1,32 @@
+label {
+    color: red;
+}
+input{
+    color: blue;
+}
+h1{
+    color: green;
+    text-align: center;
+    text-transform: uppercase;
+}
+.subh{
+    color: #ff00ff;
+    text-align: right;
+}
+.btn{
+    background-color: #ff9500;
+    color: #000;
+    margin: 10px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+
+h2, h3{
+    color: #ff9500;
+    font-size: 30px;
+    text-shadow: 1px 1px 5px #555;
+    border-bottom: #ff9500 1px solid;
+    border-radius: 5px;
+}

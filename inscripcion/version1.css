@@ -1,0 +1,75 @@
+:root{
+    --color-fondo: #000000;
+    --color-letra: #ececec;
+    --color-main: #ff9900;
+    --color1: #002055;
+    --color2: #04603B;
+    --color3: #0D6B6A;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+main {
+    width: 100%;
+    min-width: 600px;
+    background: linear-gradient(to top, var(--color2), var(--color1));
+    padding: 4rem 4rem;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+}
+img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 3px solid var(--color-letra);
+    border-radius: 50%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+form label {
+    margin-top: 15px;
+}
+form input, form button {
+    padding: 10px 15px;
+    border: 1px solid var(--color-letra);
+    border-radius: 25px;
+}
+form input {
+    color: var(--color-letra);
+    background-color: var(--color3);
+    border: 1px solid var(--color3);
+}
+form button {
+    margin-top: 20px;
+    background-color: var(--color-main);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
