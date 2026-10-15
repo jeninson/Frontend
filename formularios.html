@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios - Frontend</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Formularios - Frontend</h1>
+    <form action="#" method="get" id="formulario" name="formulario">
+        <label for="ident">Identificacion</label>
+        <input type="number" id="ident" required>
+        <br>
+        <label for="">Nombres</label>
+        <input type="text" value="" placeholder="Ingrese sus nombres" required>
+        <br>
+        <label for="">Correo</label>
+        <input type="email" value="@">
+        <br>
+        <label for="">Contraseña</label>
+        <input type="password" value="" maxlength="4" required>
+        <br>
+        <label for="">Fecha de nacimiento</label>
+        <input type="date" value="" required>
+        <br>
+        <label for="">Genero</label>
+        <br>
+        <input type="radio" name="genero" id="m">
+        <label for="m">Masculino</label><br>
+        <input type="radio" name="genero" id="f">
+        <label for="f">Femenino</label><br>
+        <input type="radio" name="genero" id="ne">
+        <label for="ne">No especificado</label>
+        <br>
+        <h3>Hoobies o Pasatiempos</h3>
+        <input type="checkbox" name="hoobies" id="leer">
+        <label for="leer">Leer</label><br>
+        <input type="checkbox" name="hoobies" id="deportes">
+        <label for="deportes">Practicar deportes</label><br>
+        <input type="checkbox" name="hoobies" id="musica">
+        <label for="musica">Escuchar música</label><br>
+        <input type="checkbox" name="hoobies" id="videojuegos">
+        <label for="videojuegos">Jugar videojuegos</label>
+        <br>
+        <label for="">Disponibilidad</label>
+        <input type="range" name="" id="">
+        <br>
+        <label for="">Color favorito</label>
+        <input type="color" name="" id="">
+        <br>
+        <label for="">Botones</label>
+        <input type="button" value="Boton" class="btn">
+        <input type="submit" value="Enviar" class="btn">
+        <input type="reset" value="Limpiar" class="btn">
+        <button type="button" class="btn">Iniciar</button>
+        <br>
+        <label for="">Archivo</label>
+        <input type="file" name="" id="">
+        <br>
+        <label for="">Ocultos</label>
+        <input type="hidden" name="Oculto1" id="Oculto1" value="123456">
+        <br>
+        <label for="">Area de texto</label>
+        <textarea name="" id="" cols="10" rows="5"></textarea>
+        <h3>Select o Lista Desplegable</h3>
+        <label for="">Genero de Nacimiento</label>
+        <select name="" id="">
+            <option value="">Seleccione una opción</option>
+            <option value="m">Masculino</option>
+            <option value="f" selected>Femenino</option>
+            <option value="o">Otro</option>
+        </select>
+        <br>
+        <label for="">Pais de Nacimiento</label>
+        <select name="" id="">
+            <optgroup label="América">
+                <option value="co">Colombia</option>
+                <option value="mx">México</option>
+            </optgroup>
+            <optgroup label="Europa">
+                <option value="es">España</option>
+                <option value="fr">Francia</option>
+            </optgroup>
+            <optgroup label="Asia">
+                <option value="jp">Japón</option>
+                <option value="cn">China</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="">Lista de Selección Multiple</label>
+        <select name="" id="" multiple>
+            <optgroup label="Inventario">
+                <option value="co" selected>Eliminar producto</option>
+                <option value="mx">Gestion de productos</option>
+            </optgroup>
+            <optgroup label="Ventas">
+                <option value="es">Gestion de ventas</option>
+                <option value="fr" selected>Eliminar venta</option>
+            </optgroup>
+            <optgroup label="Usuarios">
+                <option value="jp">Gestion de usuarios</option>
+                <option value="cn">Eliminar usuario</option>
+            </optgroup>
+        </select>
+        <h1 class="subh">Prueba de Estilos</h1>
+    </form>
+</body>
+</html>

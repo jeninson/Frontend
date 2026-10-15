@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas - Frontend</title>
+</head>
+<body>
+    <h1>Tablas - Frontend</h1>
+    <h2>Tabla Simple</h2>
+    <table border="1">
+        <tr>
+            <td>Musica</td>
+            <td>Imagenes</td>
+            <td>Redes</td>
+            <td>Videos</td>
+        </tr>
+        <tr>
+            <td>Rock</td>
+            <td>Gatos</td>
+            <td colspan="2">Facebook</td>
+        </tr>
+        <tr>
+            <td>Pop</td>
+            <td>Perros</td>
+            <td>Instagram</td>
+            <td>Max</td>
+        </tr>
+        <tr>
+            <td>Reggaeton</td>
+            <td>Animales</td>
+            <td>Twitter</td>
+            <td>Cows</td>
+        </tr>
+    </table>
+    <h2>Instruccion con Emmet</h2>
+    <code>table>tr*4>td*5</code>
+    <table border="1">
+        <tr>
+            <td>Juegos</td>
+            <td>Nombres</td>
+            <td>Animales</td>
+            <td>Pais</td>
+            <td>Musica</td>
+        </tr>
+        <tr>
+            <td>f1 - c1</td>
+            <td>f1 - c2</td>
+            <td colspan="2">Colspan de 2</td>
+            <td>f1 - c5</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Rowspan de 2</td>
+            <td>fila 2 columna 2</td>
+            <td colspan="3" rowspan="2">Colspan de 3 y Rowspan de 2</td>
+        </tr>
+        <tr>
+            <td>fila 3 columna 2</td>
+        </tr>
+    </table>
+    <h2>Tabla con Encabezado</h2>
+    <table border="1" cellpadding="5" cellspacing="2">
+        <thead>
+            <tr>
+                <th>Musica</th>
+                <th>Imagenes</th>
+                <th>Redes</th>
+                <th>Videos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rock</td>
+                <td>Gatos</td>
+                <td>Facebook</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Pop</td>
+                <td>Perros</td>
+                <td>Instagram</td>
+                <td>Max</td>
+            </tr>
+            <tr>
+                <td>Reggaeton</td>
+                <td>Animales</td>
+                <td>Twitter</td>
+                <td>Cows</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>3</th>
+                <th>45</th>
+                <th>60</th>
+                <th>20</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
