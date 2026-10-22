@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            place-items: center;
+            background: #f5f6f8;
+            color: #202124;
+            font-family: Arial, sans-serif;
+        }
+
+        .login {
+            width: min(100%, 380px);
+            padding: 40px;
+            border: 1px solid #e8e9ec;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 8px 24px rgb(0 0 0 / 5%);
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 1.75rem;
+        }
+
+        .intro {
+            margin: 0 0 28px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 13px;
+            border: 1px solid #d8dbe0;
+            border-radius: 7px;
+            background: #fff;
+            color: inherit;
+            font: inherit;
+        }
+
+        input:focus {
+            border-color: #555c6c;
+            outline: 3px solid rgb(85 92 108 / 15%);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 4px;
+            padding: 12px;
+            border: 0;
+            border-radius: 7px;
+            background: #4975f8;
+            color: #fff;
+            cursor: pointer;
+            font: inherit;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #2d65f5;
+            font-size: 1.05rem;
+        }
+
+        .help {
+            margin: 20px 0 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: #343a46;
+        }
+
+        @media (max-width: 420px) {
+            .login {
+                padding: 30px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="login">
+        <h1>Iniciar sesión</h1>
+        <p class="intro">Ingresa tus datos para continuar.</p>
+
+        <form action="#" method="post">
+            <div class="field">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" placeholder="tu@correo.com" required>
+            </div>
+
+            <div class="field">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" autocomplete="current-password" placeholder="Tu contraseña" required>
+            </div>
+
+            <button type="subbuttonmit">Ingresar</button>
+        </form>
+
+        <p class="help"><a href="#">¿Olvidaste tu contraseña?</a></p>
+    </main>
+</body>
+</html>
