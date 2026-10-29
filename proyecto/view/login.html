@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="../css/estilo_login.css">
+</head>
+<body>
+    <main class="login">
+        <h1>Iniciar sesión</h1>
+        <p class="intro">Ingresa tus credenciales del sistema.</p>
+
+        <form action="#" method="post">
+            <div class="field">
+                <label for="correo">Usuario o Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" placeholder="tu@correo.com" required>
+            </div>
+
+            <div class="field">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" autocomplete="current-password" placeholder="Tu contraseña" required>
+            </div>
+
+            <button type="subbuttonmit">Ingresar</button>
+        </form>
+
+        <p class="help"><a href="#">¿Olvidaste tu contraseña?</a></p>
+    </main>
+    <script src="../js/main.js" type="module"></script>
+</body>
+</html>
