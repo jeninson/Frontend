@@ -4,9 +4,7 @@ export function iniciarSesion() {
     const EmailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
     const ClaveRegex = /^[0-9]{1,10}$/ // /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // Al menos 8 caracteres, al menos una letra y un número
     let correo = document.getElementById("correo").value.trim();
-    let clave = document.querySelector("#clave").value.trim();
-    //const clave2 = clave.value.trim();
-    
+    let clave = document.querySelector("#clave").value.trim();    
 
     // Validar correo electrónico
     if (!EmailRegex.test(correo)) {
@@ -19,5 +17,5 @@ export function iniciarSesion() {
         return;
     }
 
-    alert("Correo: " + correo + "\nClave: " + clave);
+    alert("*INFORMACION DEL USUARIO*\n\nCorreo: " + correo + "\nClave: " + clave +"\nClave (MD5): " + md5(clave));
 }
