@@ -1,3 +1,4 @@
+import { enviarPeticion, ir } from "./herramientas.js";
 
 export function iniciarSesion() {
     //alert("Estamos en la función iniciar sesión");
@@ -16,28 +17,15 @@ export function iniciarSesion() {
         alert("Por favor, ingresa una contraseña válida.");
         return;
     }
-    alert("*INFORMACION DEL USUARIO*\n\nCorreo: " + correo + "\nClave: " + clave +"\nClave (MD5): " + md5(clave));
-    enviarPeticion({url: '../backend/login/index.php', metodo: "DELETE", parametros: {correo, clave: md5(clave)}});
-}
 
-async function enviarPeticion(info){
-    try {
-
-        let headers = {'Content-Type': 'application/json'};
-        let {url, metodo, parametros} = info;
-        alert("Enviando petición con método: " + metodo + "\nParámetros: " + JSON.stringify(parametros));
-        if(metodo === "POST" || metodo === "PUT"){headers = {method: metodo, headers: {'Content-Type': 'application/json'}, body: JSON.stringify(parametros)}};
-        if(metodo === "GET" || metodo === "DELETE"){url += "?" + new URLSearchParams(parametros).toString();};
-        
-        const response = await fetch(url, headers);
-
-        if (!response.ok) {
-            throw new Error('No se pudieron enviar los datos');
+    //alert("*INFORMACION DEL USUARIO*\n\nCorreo: " + correo + "\nClave: " + clave +"\nClave (MD5): " + md5(clave));
+    enviarPeticion({
+        url: '../backend/login/index.php', 
+        metodo: "POST", 
+        parametros: {correo, clave: md5(clave)},
+        fSuccess: (resp) => {
+            console.log('Respuesta del servidor:', resp);
+            //ir("gestionprincipal.html");
         }
-
-        const resultado = await response.json();
-        console.log('Respuesta del servidor:', resultado);
-    } catch (error) {
-        console.error('Error:', error);
-    }
+    });
 }
