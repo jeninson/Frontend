@@ -4,7 +4,7 @@
     include_once('../config.php');
     try{
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            //$_POST = json_decode(file_get_contents('php://input'), true);
+            $_POST = json_decode(file_get_contents('php://input'), true);
             if(!empty($_POST['correo']) && !empty($_POST['clave'])){
                 $correo = htmlspecialchars(trim($_POST['correo']));
                 $clave = htmlspecialchars(trim($_POST['clave']));
