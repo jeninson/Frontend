@@ -6,6 +6,7 @@
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $_POST = json_decode(file_get_contents('php://input'), true);
             if(!empty($_POST['correo']) && !empty($_POST['clave'])){
+                //Validación de credenciales
                 $correo = htmlspecialchars(trim($_POST['correo']));
                 $clave = htmlspecialchars(trim($_POST['clave']));
                 $EmailRegex = '/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/';
@@ -17,12 +18,16 @@
                     exit;
                 }
                 //var_dump($correo, $clave);
-                $conexion = Conexion::obtenerConexion();
+                //Hacer petición a la base de datos para validar las credenciales
+                $conn = Conexion::obtenerConexion();
+                // Consulta SQL para verificar las credenciales
                 $sql = "SELECT ID, NOMBRES, APELLIDOS, USER, EMAIL FROM `usuarios` WHERE EMAIL=:correo AND PASSWORD=:clave";
-                $stmt = $conexion->prepare($sql);
+                // SELECT ID, NOMBRES, APELLIDOS, USER, EMAIL FROM `usuarios` WHERE EMAIL='jeninson6@hotmail.com' AND PASSWORD='81dc9bdb52d04dc20036dbd8313ed055'
+                $stmt = $conn->prepare($sql);
                 $stmt->bindParam(':correo', $correo);
                 $stmt->bindParam(':clave', $clave);
                 $stmt->execute();
+                //  Obtener los resultados
                 $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 if(count($resultado) > 0){
                     http_response_code(200);

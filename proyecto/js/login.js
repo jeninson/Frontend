@@ -24,6 +24,11 @@ export function iniciarSesion() {
         metodo: "POST", 
         parametros: {correo, clave: md5(clave)},
         fSuccess: (resp) => {
+            if(resp.code === 200){
+                alert("Bienvenido " + resp.data[0].NOMBRES + " " + resp.data[0].APELLIDOS);
+            }else{
+                alert("Error: " + resp.msg);
+            }
             console.log('Respuesta del servidor:', resp);
             //ir("gestionprincipal.html");
         }
